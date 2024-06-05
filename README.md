@@ -2,16 +2,11 @@
 
 This repo contains sample extensions for [Woodpecker CI](https://woodpecker-ci.org/).
 
-## Run them locally
+## Run locally
 
-```shell
-go run ./config
+Copy `.env.example` to `.env` and adjust the values to your needs.
 
-# or
-
-go run ./secrets
-```
-
+Then run the following command: `go run .`
 
 ## Sample configuration extension
 

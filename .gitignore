@@ -1,6 +1,4 @@
 .vscode
 .env
-
-vendor/
-
-example-config-service
+public-key.pem
+__debug_bin*
