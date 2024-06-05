@@ -1,4 +1,4 @@
-package main
+package secrets
 
 type Secret struct {
 	ID     int64    `json:"id"`
