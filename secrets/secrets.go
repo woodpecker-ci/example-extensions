@@ -6,10 +6,12 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	"go.woodpecker-ci.org/woodpecker/v2/server/model"
 )
 
 func RegisterSecretsExtension(r *gin.RouterGroup, pubKey ed25519.PublicKey) {
-	secrets := make([]*Secret, 0)
+	secrets := make([]*model.Secret, 0)
 
 	r.GET("/secrets", func(c *gin.Context) {
 		c.JSON(http.StatusOK, secrets)
@@ -27,7 +29,7 @@ func RegisterSecretsExtension(r *gin.RouterGroup, pubKey ed25519.PublicKey) {
 	})
 
 	r.POST("/secrets", func(c *gin.Context) {
-		var secret Secret
+		var secret model.Secret
 		if err := c.BindJSON(&secret); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return
