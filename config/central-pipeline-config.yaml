@@ -1,0 +1,5 @@
+pipeline:
+  centralized:
+    image: alpine
+    commands:
+      - echo "Hello there from a central place"

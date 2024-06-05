@@ -1,0 +1,6 @@
+.vscode
+.env
+
+vendor/
+
+example-config-service
