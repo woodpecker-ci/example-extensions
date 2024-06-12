@@ -21,4 +21,5 @@ using the public key of your Woodpecker CI instance!
 
 ## More about Woodpecker extensions
 
-For more information about Woodpecker CI extensions, please refer to the [official documentation](https://woodpecker-ci.org/docs/usage/extensions/).
+For more information about Woodpecker CI extensions, please refer to the
+[official documentation](https://woodpecker-ci.org/docs/usage/extensions/).
