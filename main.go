@@ -29,7 +29,7 @@ func main() {
 
 	// IMPORTANT: We verify all incoming requests to our api to ensure they are signed and coming from Woodpecker
 	r.Use(func(c *gin.Context) {
-		err := utils.Verify(pubKey, c.Writer, c.Request)
+		err := utils.Verify(pubKey, c.Request)
 		if err != nil {
 			log.Printf("Failed to verify request: %v", err)
 			c.JSON(401, gin.H{"error": "Failed to verify request"})

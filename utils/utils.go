@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/go-ap/httpsig"
+	"github.com/yaronf/httpsign"
 	"golang.org/x/oauth2"
 )
 
@@ -85,22 +85,19 @@ func GetPubKey() (ed25519.PublicKey, error) {
 	return pubKey, nil
 }
 
-func Verify(pubKey ed25519.PublicKey, w http.ResponseWriter, r *http.Request) error {
-	// check signature
-	pubKeyID := "woodpecker-ci-plugins"
+// Verify check cryptographic signature
+func Verify(pubKey ed25519.PublicKey, r *http.Request) error {
+	pubKeyID := "woodpecker-ci-extensions"
 
-	keystore := httpsig.NewMemoryKeyStore()
-	keystore.SetKey(pubKeyID, pubKey)
-
-	verifier := httpsig.NewVerifier(keystore)
-	verifier.SetRequiredHeaders([]string{"(request-target)", "date"})
-
-	keyID, err := verifier.Verify(r)
+	verifier, err := httpsign.NewEd25519Verifier(pubKey,
+		httpsign.NewVerifyConfig(),
+		httpsign.Headers("@request-target", "content-digest"))
 	if err != nil {
 		return err
 	}
 
-	if keyID != pubKeyID {
+	err = httpsign.VerifyRequest(pubKeyID, *verifier, r)
+	if err != nil {
 		return err
 	}
 
