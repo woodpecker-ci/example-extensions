@@ -8,7 +8,7 @@ require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
 	github.com/yaronf/httpsign v0.3.1
-	go.woodpecker-ci.org/woodpecker/v2 v2.8.0
+	go.woodpecker-ci.org/woodpecker/v2 v2.8.1
 	golang.org/x/oauth2 v0.24.0
 )
 
