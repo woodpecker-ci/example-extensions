@@ -2,7 +2,7 @@ module github.com/woodpecker-ci/example-extensions
 
 go 1.24.0
 
-toolchain go1.25.0
+toolchain go1.25.1
 
 require (
 	github.com/gin-gonic/gin v1.10.1
