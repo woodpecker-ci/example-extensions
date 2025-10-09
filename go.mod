@@ -2,14 +2,14 @@ module github.com/woodpecker-ci/example-extensions
 
 go 1.24.4
 
-toolchain go1.25.1
+toolchain go1.25.2
 
 require (
 	github.com/gin-gonic/gin v1.11.0
 	github.com/joho/godotenv v1.5.1
 	github.com/yaronf/httpsign v0.3.2
 	go.woodpecker-ci.org/woodpecker/v3 v3.10.0
-	golang.org/x/oauth2 v0.31.0
+	golang.org/x/oauth2 v0.32.0
 )
 
 require (
