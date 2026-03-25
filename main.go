@@ -2,9 +2,11 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/woodpecker-ci/example-extensions/config"
+	"github.com/woodpecker-ci/example-extensions/registries"
 	"github.com/woodpecker-ci/example-extensions/secrets"
 	"github.com/woodpecker-ci/example-extensions/utils"
 
@@ -32,7 +34,7 @@ func main() {
 		err := utils.Verify(pubKey, c.Request)
 		if err != nil {
 			log.Printf("Failed to verify request: %v", err)
-			c.JSON(401, gin.H{"error": "Failed to verify request"})
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Failed to verify request"})
 			c.Abort()
 			return
 		}
@@ -41,6 +43,7 @@ func main() {
 	g := r.Group("/repo/:repoId")
 	config.RegisterConfigExtension(g, pubKey)
 	secrets.RegisterSecretsExtension(g, pubKey)
+	registries.RegisterRegistriesExtension(g, pubKey)
 
 	host := os.Getenv("EXTENSION_HOST")
 	if host != "" {

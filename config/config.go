@@ -15,7 +15,7 @@ func RegisterConfigExtension(r *gin.RouterGroup, pubKey ed25519.PublicKey) {
 			return
 		}
 
-		c.JSON(http.StatusOK, map[string]interface{}{"configs": []config{
+		c.JSON(http.StatusOK, map[string]any{"configs": []config{
 			{
 				Name: "central pipe",
 				Data: overrideConfiguration,
