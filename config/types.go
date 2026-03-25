@@ -13,8 +13,8 @@ type config struct {
 
 type incoming struct {
 	*types.IncomingRequest
-	
-	Configuration []*config       `json:"configs"`
+
+	Configuration []*config `json:"configs"`
 }
 
 //go:embed central-pipeline-config.yaml
