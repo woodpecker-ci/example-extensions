@@ -3,7 +3,7 @@ package config
 import (
 	_ "embed"
 
-	"go.woodpecker-ci.org/woodpecker/v3/server/model"
+	"github.com/woodpecker-ci/example-extensions/types"
 )
 
 type config struct {
@@ -12,9 +12,9 @@ type config struct {
 }
 
 type incoming struct {
-	Repo          *model.Repo     `json:"repo"`
-	Build         *model.Pipeline `json:"pipeline"`
-	Configuration []*config       `json:"configs"`
+	*types.IncomingRequest
+
+	Configuration []*config `json:"configs"`
 }
 
 //go:embed central-pipeline-config.yaml
