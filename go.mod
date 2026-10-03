@@ -7,7 +7,7 @@ toolchain go1.27.1
 require (
 	github.com/gin-gonic/gin v1.12.0
 	github.com/joho/godotenv v1.5.1
-	github.com/yaronf/httpsign v0.6.1
+	github.com/yaronf/httpsign v0.6.2
 	go.woodpecker-ci.org/woodpecker/v3 v3.18.1
 	golang.org/x/oauth2 v0.37.0
 )
@@ -18,7 +18,7 @@ require (
 	github.com/bytedance/sonic/loader v0.5.0 // indirect
 	github.com/cloudwego/base64x v0.1.6 // indirect
 	github.com/drone/envsubst v1.0.3 // indirect
-	github.com/dunglas/httpsfv v1.1.1 // indirect
+	github.com/dunglas/httpsfv v1.1.2 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.12 // indirect
 	github.com/gdgvda/cron v0.7.0 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
