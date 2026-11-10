@@ -9,7 +9,7 @@ require (
 	github.com/joho/godotenv v1.5.1
 	github.com/yaronf/httpsign v0.6.2
 	go.woodpecker-ci.org/woodpecker/v3 v3.20.1
-	golang.org/x/oauth2 v0.37.0
+	golang.org/x/oauth2 v0.38.0
 )
 
 require (
