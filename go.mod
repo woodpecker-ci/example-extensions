@@ -7,7 +7,7 @@ toolchain go1.27.4
 require (
 	github.com/gin-gonic/gin v1.12.0
 	github.com/joho/godotenv v1.5.1
-	github.com/yaronf/httpsign v0.6.3
+	github.com/yaronf/httpsign v0.6.4
 	go.woodpecker-ci.org/woodpecker/v3 v3.20.1
 	golang.org/x/oauth2 v0.38.0
 )
