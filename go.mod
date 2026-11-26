@@ -8,7 +8,7 @@ require (
 	github.com/gin-gonic/gin v1.12.0
 	github.com/joho/godotenv v1.5.1
 	github.com/yaronf/httpsign v0.6.5
-	go.woodpecker-ci.org/woodpecker/v3 v3.20.1
+	go.woodpecker-ci.org/woodpecker/v3 v3.21.0
 	golang.org/x/oauth2 v0.38.0
 )
 
@@ -20,7 +20,7 @@ require (
 	github.com/drone/envsubst v1.0.3 // indirect
 	github.com/dunglas/httpsfv v1.1.2 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.12 // indirect
-	github.com/gdgvda/cron v0.7.0 // indirect
+	github.com/gdgvda/cron v0.8.0 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
@@ -48,9 +48,9 @@ require (
 	go.mongodb.org/mongo-driver/v2 v2.5.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/arch v0.22.0 // indirect
-	golang.org/x/crypto v0.58.0 // indirect
-	golang.org/x/net v0.62.0 // indirect
-	golang.org/x/sys v0.49.0 // indirect
-	golang.org/x/text v0.43.0 // indirect
+	golang.org/x/crypto v0.59.0 // indirect
+	golang.org/x/net v0.63.0 // indirect
+	golang.org/x/sys v0.50.0 // indirect
+	golang.org/x/text v0.44.0 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
